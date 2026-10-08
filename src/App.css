@@ -1,0 +1,697 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d1024;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top, #252957 0%, #11142d 45%, #080a19 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.stars span {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+}
+
+.stars span:nth-child(1) {
+  top: 12%;
+  left: 10%;
+}
+
+.stars span:nth-child(2) {
+  top: 20%;
+  right: 15%;
+}
+
+.stars span:nth-child(3) {
+  top: 55%;
+  left: 6%;
+}
+
+.stars span:nth-child(4) {
+  top: 70%;
+  right: 8%;
+}
+
+.stars span:nth-child(5) {
+  top: 35%;
+  right: 35%;
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 35px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+header p {
+  margin-top: 8px;
+  color: #aeb3d1;
+}
+
+/* MAIN */
+
+.container {
+  width: min(1050px, 100%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* WELCOME */
+
+.welcome-card {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background: rgba(27, 31, 67, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.welcome-room {
+  position: relative;
+  min-height: 560px;
+  background: linear-gradient(#151936, #25294d);
+  overflow: hidden;
+}
+
+/* WINDOW */
+
+.welcome-window {
+  position: absolute;
+  width: 180px;
+  height: 170px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #090d24;
+  border: 8px solid #44486d;
+  border-radius: 12px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.welcome-window span {
+  display: block;
+  font-size: 60px;
+}
+
+.welcome-window small {
+  position: absolute;
+  color: #ffffff;
+}
+
+.welcome-window small:nth-child(2) {
+  top: 30px;
+  left: 30px;
+}
+
+.welcome-window small:nth-child(3) {
+  right: 30px;
+  bottom: 30px;
+}
+
+/* MOON */
+
+.welcome-moon {
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  font-size: 70px;
+}
+
+/* LAMP */
+
+.welcome-lamp {
+  position: absolute;
+  bottom: 150px;
+  left: 75px;
+  width: 70px;
+  text-align: center;
+}
+
+.lamp-glow {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: -30px;
+  top: -45px;
+  background: rgba(255, 217, 120, 0.15);
+  border-radius: 50%;
+}
+
+.lamp-shade {
+  width: 65px;
+  height: 45px;
+  margin: auto;
+  background: #d9b96e;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.lamp-stand {
+  width: 8px;
+  height: 65px;
+  background: #b49758;
+  margin: auto;
+}
+
+/* BED */
+
+.welcome-bed {
+  position: absolute;
+  left: 22%;
+  bottom: 95px;
+  width: 330px;
+  height: 130px;
+  background: #b8b3c8;
+  border-radius: 12px 12px 5px 5px;
+}
+
+.welcome-pillow {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  width: 85px;
+  height: 45px;
+  background: #eeeeff;
+  border-radius: 10px;
+}
+
+.welcome-blanket {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 210px;
+  height: 105px;
+  background: #777ca7;
+  border-radius: 15px 15px 0 0;
+}
+
+/* PLANT */
+
+.welcome-plant {
+  position: absolute;
+  bottom: 90px;
+  right: 45px;
+  font-size: 65px;
+}
+
+/* WELCOME CONTENT */
+
+.welcome-content {
+  padding: 75px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #9da5d9;
+  font-weight: bold;
+}
+
+.welcome-content h1 {
+  font-size: 52px;
+  line-height: 1.05;
+  margin: 18px 0;
+}
+
+.welcome-content p {
+  color: #b5b9d0;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.start-button {
+  border: none;
+  border-radius: 14px;
+  padding: 15px 22px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #7779dc, #9a7be8);
+  box-shadow: 0 10px 25px rgba(125, 120, 220, 0.3);
+  transition: 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* FORM */
+
+.form-card,
+.preview-card {
+  background: rgba(27, 31, 67, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.form-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.form-icon {
+  font-size: 42px;
+}
+
+.form-heading h1 {
+  margin: 5px 0;
+  font-size: 30px;
+}
+
+.form-heading p {
+  color: #aeb3d1;
+  margin: 0;
+}
+
+/* INPUT */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #dfe1f3;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="time"] {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #454a72;
+  border-radius: 12px;
+  outline: none;
+  background: #151936;
+  color: white;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #8e8fe8;
+}
+
+.time-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* MOODS / MODES */
+
+.modes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mode {
+  flex: 1;
+  min-width: 110px;
+  border: 1px solid #454a72;
+  background: #151936;
+  color: #cfd2e9;
+  padding: 13px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mode:hover {
+  border-color: #8e8fe8;
+}
+
+.active-mode {
+  background: #6266bd;
+  border-color: #8e8fe8;
+  color: white;
+}
+
+/* TEMPERATURE */
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background: #151936;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.temperature button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #363b63;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.temperature strong {
+  min-width: 65px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.form-actions .start-button {
+  flex: 1;
+}
+
+.cancel-button,
+.edit-button,
+.reset-button {
+  border: 1px solid #4a4f78;
+  background: transparent;
+  color: #d9dbef;
+  padding: 13px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* ROOM PREVIEW */
+
+.preview-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.room {
+  position: relative;
+  height: 390px;
+  background: linear-gradient(#12162f, #2d3153);
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 70px;
+}
+
+.window {
+  position: absolute;
+  width: 170px;
+  height: 150px;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #090d24;
+  border: 8px solid #44486d;
+  border-radius: 10px;
+}
+
+.window-moon {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 15px;
+}
+
+.window-star {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
+.window-star.second {
+  right: 25px;
+  left: auto;
+  bottom: 25px;
+  top: auto;
+}
+
+/* ROOM LAMP */
+
+.lamp {
+  position: absolute;
+  left: 100px;
+  bottom: 105px;
+  width: 65px;
+  text-align: center;
+}
+
+.lamp-light {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: -28px;
+  top: -45px;
+  border-radius: 50%;
+  background: rgba(255, 220, 130, 0.15);
+}
+
+.lamp-shade {
+  position: relative;
+  width: 60px;
+  height: 42px;
+  background: #d7b76b;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.lamp-stand {
+  width: 7px;
+  height: 60px;
+  background: #b49b61;
+  margin: auto;
+}
+
+/* ROOM BED */
+
+.bed {
+  position: absolute;
+  left: 25%;
+  bottom: 75px;
+  width: 390px;
+  height: 125px;
+  background: #bcb8cc;
+  border-radius: 12px;
+}
+
+.pillow {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  width: 95px;
+  height: 45px;
+  border-radius: 10px;
+  background: #eeeeff;
+}
+
+.blanket {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 255px;
+  height: 100px;
+  border-radius: 15px 15px 0 0;
+  background: #7379a8;
+}
+
+.bed-leg {
+  position: absolute;
+  bottom: -20px;
+  width: 10px;
+  height: 25px;
+  background: #555875;
+}
+
+.bed-leg.left {
+  left: 25px;
+}
+
+.bed-leg.right {
+  right: 25px;
+}
+
+/* PLANT */
+
+.plant {
+  position: absolute;
+  bottom: 70px;
+  right: 70px;
+  font-size: 65px;
+}
+
+.floor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #15172e;
+}
+
+/* INFO */
+
+.room-info {
+  padding: 35px 40px 40px;
+}
+
+.room-info h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.mood-text {
+  color: #aeb3d1;
+}
+
+.status-list {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.status-list div {
+  background: #151936;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.status-list span {
+  color: #aeb3d1;
+}
+
+.status-list strong {
+  color: white;
+}
+
+/* SLEEP QUALITY */
+
+.sleep-quality {
+  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  background: rgba(103, 106, 193, 0.2);
+}
+
+.sleep-quality > span {
+  font-size: 25px;
+}
+
+.sleep-quality small,
+.sleep-quality strong {
+  display: block;
+}
+
+.sleep-quality small {
+  color: #9da5d9;
+  margin-bottom: 3px;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-button,
+.reset-button {
+  flex: 1;
+}
+
+.edit-button:hover,
+.reset-button:hover,
+.cancel-button:hover {
+  background: #292e55;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .welcome-card {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-room {
+    min-height: 400px;
+  }
+
+  .welcome-content {
+    padding: 40px 30px;
+  }
+
+  .welcome-content h1 {
+    font-size: 40px;
+  }
+
+  .time-row {
+    grid-template-columns: 1fr;
+  }
+
+  .status-list {
+    grid-template-columns: 1fr;
+  }
+
+  .bed {
+    left: 18%;
+    width: 70%;
+  }
+
+  .welcome-bed {
+    left: 15%;
+    width: 70%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
